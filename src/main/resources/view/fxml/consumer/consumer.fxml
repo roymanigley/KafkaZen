@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bytecrowd.kafkazen.gui.controllers.ConsumerController">
+   <children>
+      <AnchorPane>
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets bottom="40.0" left="20.0" right="20.0" top="40.0" />
+                     </padding>
+                     <children>
+                        <JFXComboBox fx:id="topicInp" maxWidth="1.7976931348623157E308" minWidth="-Infinity" promptText="Kafka Topic" />
+                        <JFXCheckBox fx:id="fetchAllInp" text="fetch from beginning" />
+                        <HBox alignment="CENTER_LEFT" maxHeight="50.0" prefHeight="50.0" spacing="20.0">
+                           <children>
+                              <JFXToggleButton fx:id="randomGroupIdToggle" selected="true" text="Random group id" />
+                              <JFXTextField fx:id="manualGroupIdInp" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="400.0" promptText="Consumer group id" />
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="fileChooseBtn" text="File: ">
+                           <tooltip>
+                              <Tooltip text="Select a file to dump the events" />
+                           </tooltip></JFXButton>
+                        <JFXButton fx:id="confirmBtn" maxWidth="1.7976931348623157E308" minHeight="-Infinity" text="Start">
+                           <tooltip>
+                              <Tooltip text="Start consuming Kafka events" />
+                           </tooltip></JFXButton>
+                        <JFXButton fx:id="stopBtn" maxWidth="1.7976931348623157E308" minHeight="-Infinity" text="Stop">
+                           <tooltip>
+                              <Tooltip text="Stop consuming further Kafka events" />
+                           </tooltip></JFXButton>
+                     </children>
+                  </VBox>
+               </center>
+               <top>
+                  <AnchorPane BorderPane.alignment="CENTER">
+                     <children>
+                        <Label text="KafkaZen → consumer" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="FreeMono Bold" size="24.0" />
+                           </font></Label>
+                        <JFXHamburger fx:id="menuBtn" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                     <BorderPane.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </AnchorPane>
+               </top>
+               <bottom>
+                  <AnchorPane BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+         </children>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </AnchorPane>
+      <JFXDrawer fx:id="menuDrawer" defaultDrawerSize="200.0">
+         <children>
+         </children>
+      </JFXDrawer>
+   </children>
+</StackPane>

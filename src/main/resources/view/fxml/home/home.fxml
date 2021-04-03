@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bytecrowd.kafkazen.gui.controllers.HomeController">
+   <children>
+      <AnchorPane>
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <VBox alignment="CENTER" fillWidth="false" spacing="20.0" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets bottom="40.0" top="40.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/kafka.png" />
+                           </image>
+                        </ImageView>
+                        <JFXTextField fx:id="kafkaServerInp" minWidth="200.0" promptText="Kafka server (host:port)" />
+                        <JFXButton fx:id="confirmBtn" maxWidth="1.7976931348623157E308" minHeight="-Infinity" styleClass="button-login">
+                           <tooltip>
+                              <Tooltip text="Connect to Kafka" />
+                           </tooltip></JFXButton>
+                     </children>
+                  </VBox>
+               </center>
+               <top>
+                  <AnchorPane BorderPane.alignment="CENTER">
+                     <children>
+                        <Label text="KafkaZen → server connection" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="FreeMono Bold" size="24.0" />
+                           </font></Label>
+                        <JFXHamburger fx:id="menuBtn" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                     <BorderPane.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </AnchorPane>
+               </top>
+               <bottom>
+                  <AnchorPane BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+         </children>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </AnchorPane>
+      <JFXDrawer fx:id="menuDrawer" defaultDrawerSize="200.0">
+         <children>
+         </children>
+      </JFXDrawer>
+   </children>
+</StackPane>
