@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="stackPane" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.gui.contoller.entities.EditUserController">
+   <children>
+      <AnchorPane prefWidth="400.0">
+         <children>
+            <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <ScrollPane vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <VBox layoutX="10.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <JFXTextField fx:id="textField" labelFloat="true" promptText="Text Field">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </JFXTextField>
+                                    <JFXPasswordField fx:id="passwordField" />
+                                    <JFXTextArea fx:id="textArea" labelFloat="true" prefRowCount="5" promptText="Text Area" />
+                                    <JFXDatePicker fx:id="datePicker" promptText="Date" />
+                                    <JFXTimePicker fx:id="timePicker" promptText="Time" />
+                                    <JFXCheckBox fx:id="checkBox" text="Label" />
+                                    <JFXComboBox fx:id="comboBox" promptText="Combo box">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </JFXComboBox>
+                                    <HBox alignment="CENTER" spacing="50.0">
+                                       <children>
+                                          <JFXButton fx:id="cancelBtn" text="cancel" />
+                                          <JFXButton fx:id="confirmBtn" text="confirm" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="40.0" top="40.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </center>
+               <top>
+                  <AnchorPane BorderPane.alignment="CENTER">
+                     <children>
+                        <Label text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <JFXHamburger fx:id="menuBtn" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </top>
+               <bottom>
+                  <AnchorPane BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+         </children>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </AnchorPane>
+      <JFXDrawer fx:id="menuDrawer" defaultDrawerSize="200.0"/>
+   </children>
+</StackPane>

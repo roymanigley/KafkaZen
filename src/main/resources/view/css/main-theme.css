@@ -1,0 +1,234 @@
+
+* {
+    -theme-background-color: #e1e2e1;
+    -theme-default-color: rgba(38, 166, 154, 0.7);
+    -theme-input-color: rgba(38, 166, 154, 0.7);
+    -theme-header-background: rgba(38, 166, 154, 0.7);
+    -theme-footer-background: rgba(38, 166, 154, 0.7);
+}
+
+.root {
+    -fx-font-family: Roboto;
+    -fx-background-color: -theme-background-color; /*#f4f4f4*/
+}
+
+.theme-header {
+    -fx-padding: 10 5em 10 5em;
+    -fx-background-color: -theme-header-background;
+}
+
+.theme-center {
+    -fx-padding: 10 5em 0 5em;
+}
+
+.theme-footer {
+    -fx-padding: 10 5em 10 5em;
+    -fx-background-color: -theme-footer-background;
+}
+
+
+
+
+
+
+
+
+.jfx-date-picker > .jfx-text-field { -jfx-label-float: true; }
+
+.jfx-time-picker > .jfx-text-field { -jfx-label-float: true; }
+
+
+
+
+.jfx-button {
+    -fx-padding: 0.7em 0.57em 0.7em 0.57em;
+    -fx-font-size: 14px;
+    -fx-background-color: #fefefe;
+    -fx-text-fill: BLACK;
+}
+
+
+.transparent-button {
+    -fx-background-color: TRANSPARENT;
+}
+
+/* Icon from https://materialdesignicons.com/ */
+.button-delete {
+    -fx-background-color: #ff435b;
+    -fx-background-image: url('../images/icons/delete.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50%;
+    -fx-padding: 0.7em 0.57em;
+    -fx-min-width: 40;
+    -fx-max-width: 40;
+    -fx-border-radius: 15pt;
+    -fx-background-radius: 15pt;
+}
+
+.button-edit {
+    -fx-background-color: #008080;
+    -fx-background-image: url('../images/icons/edit.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50%;
+    -fx-padding: 0.7em 0.57em;
+    -fx-min-width: 40;
+    -fx-max-width: 40;
+    -fx-border-radius: 15pt;
+    -fx-background-radius: 15pt;
+}
+
+.button-add {
+    -fx-background-color: #008080;
+    -fx-background-image: url('../images/icons/add.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50%;
+    -fx-padding: 0.7em 0.57em;
+    -fx-min-width: 40;
+    -fx-max-width: 40;
+    -fx-border-radius: 15pt;
+    -fx-background-radius: 15pt;
+}
+
+.button-check {
+    -fx-background-color: #008080;
+    -fx-background-image: url('../images/icons/check.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50%;
+    -fx-padding: 0.7em 0.57em;
+    -fx-min-width: 40;
+    -fx-max-width: 40;
+    -fx-border-radius: 15pt;
+    -fx-background-radius: 15pt;
+}
+
+.button-login {
+    -fx-background-color: #008080;
+    -fx-background-image: url('../images/icons/login.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50%;
+    -fx-padding: 0.7em 0.57em;
+    -fx-min-width: 40;
+    -fx-max-width: 40;
+    -fx-border-radius: 15pt;
+    -fx-background-radius: 15pt;
+}
+
+.button-save {
+    -fx-background-color: TRANSPARENT;
+    -fx-background-image: url('../images/icons/save.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50%;
+    -fx-padding: 0.7em 0.57em;
+    -fx-min-width: 40;
+    -fx-max-width: 40;
+    -fx-border-radius: 15pt;
+    -fx-background-radius: 15pt;
+}
+
+.button-cancel {
+    -fx-background-color: TRANSPARENT;
+    -fx-background-image: url('../images/icons/close.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50%;
+    -fx-padding: 0.7em 0.57em;
+    -fx-min-width: 40;
+    -fx-max-width: 40;
+    -fx-border-radius: 15pt;
+    -fx-background-radius: 15pt;
+}
+
+.button-primary {
+    -fx-padding: 0.7em 0.57em;
+    -fx-font-size: 14px;
+    -fx-background-color: #3f51b5;
+    -fx-text-fill: WHITE;
+}
+
+.button-theme {
+    -fx-padding: 0.7em 0.57em;
+    -fx-font-size: 14px;
+    -fx-background-color: -theme-default-color;
+    -fx-text-fill: WHITE;
+}
+
+.button-danger {
+    -fx-padding: 0.7em 0.57em;
+    -fx-font-size: 14px;
+    -fx-background-color: #ef5350;
+    -fx-text-fill: WHITE;
+}
+
+.button-warn {
+    -fx-padding: 0.7em 0.57em;
+    -fx-font-size: 14px;
+    -fx-background-color: #ffa726;
+    -fx-text-fill: WHITE;
+}
+
+.button-success {
+    -fx-padding: 0.7em 0.57em;
+    -fx-font-size: 14px;
+    -fx-background-color: #66bb6a;
+    -fx-text-fill: WHITE;
+}
+
+.menu-box {
+    -fx-background-color: #fefefe;
+}
+
+.button-menu:hover {
+    -fx-background-color: rgba(38, 166, 154, 0.7); /*rgba(81,100,174,0.5);*/
+    -fx-padding: 0.7em 0.57em 0.7em 0.57em;
+    -fx-text-fill: WHITE;
+}
+
+.jfx-radio-button {
+    -jfx-selected-color: -theme-input-color;
+}
+
+.jfx-check-box {
+    -jfx-checked-color: -theme-input-color;
+}
+
+.jfx-text-field, .jfx-password-field, .jfx-text-area, .jfx-combo-box {
+    -jfx-focus-color: -theme-input-color;
+    -jfx-label-float: -theme-input-color; /*-jfx-unfocus-color*/ /*-jfx-label-float*/
+}
+
+.table-column {
+    -fx-alignment: CENTER-LEFT;
+}
+
+.tree-table-row-cell {
+    -fx-background-color: #efefef;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.tree-table-row-cell:odd {
+    -fx-background-color: #fefefe;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.tree-table-row-cell:selected {
+    -fx-background-color: rgba(38, 166, 154, 0.7);
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.columnAlignRight {
+    -fx-alignment: CENTER-RIGHT;
+}
+
+.columnAlignCenter {
+    -fx-alignment: CENTER;
+}
+

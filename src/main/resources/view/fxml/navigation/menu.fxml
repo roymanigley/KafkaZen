@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" alignment="CENTER_LEFT" minWidth="200.0" prefHeight="200.0" spacing="2.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bytecrowd.kafkazen.gui.controllers.menu.MenuController">
+   <Label alignment="CENTER" prefWidth="200.0" text="KafkaZen" VBox.vgrow="ALWAYS">
+      <font>
+         <Font name="FreeMono Bold" size="16.0" />
+      </font>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+      <padding>
+         <Insets bottom="10.0" />
+      </padding>
+   </Label>
+
+    <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../images/kafka.png" />
+        </image>
+      <VBox.margin>
+         <Insets left="65.0" />
+      </VBox.margin>
+    </ImageView>
+</VBox>
