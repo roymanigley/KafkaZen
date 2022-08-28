@@ -1,5 +1,6 @@
-package ch.bytecrowd.kafkazen.service;
+package ch.bytecrowd.kafkazen.service.impl;
 
+import ch.bytecrowd.kafkazen.service.KafkaAdminService;
 import ch.bytecrowd.kafkazen.service.model.Pair;
 import javafx.beans.property.BooleanProperty;
 import org.apache.kafka.clients.admin.*;
@@ -13,6 +14,8 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.serialization.StringDeserializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -22,12 +25,14 @@ import java.util.*;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
-class KafkaAdminServiceImpl implements KafkaAdminService, AutoCloseable {
+public class KafkaAdminServiceImpl implements KafkaAdminService, AutoCloseable {
+
+    private static final Logger LOG = LoggerFactory.getLogger(KafkaAdminServiceImpl.class);
 
     private final String host;
     private final AdminClient adminClient;
 
-    KafkaAdminServiceImpl(String host) {
+    public KafkaAdminServiceImpl(String host) {
         this.host = host;
         adminClient = KafkaAdminClient.create(getAdminConfig(host));
     }
@@ -139,7 +144,8 @@ class KafkaAdminServiceImpl implements KafkaAdminService, AutoCloseable {
                             .append(record.timestampType())
                             .append(newLine);
                 }
-                System.out.println("[+] Total events consumed: " + (totalEventsConsumed += polled.count()));
+                totalEventsConsumed += polled.count();
+                LOG.info("[+] Total events consumed: {}", totalEventsConsumed);
                 outputStream.write(csvLines.toString().getBytes());
                 outputStream.flush();
             }

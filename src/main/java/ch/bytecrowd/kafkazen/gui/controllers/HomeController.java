@@ -4,7 +4,6 @@ package ch.bytecrowd.kafkazen.gui.controllers;
 import ch.bytecrowd.kafkazen.Main;
 import ch.bytecrowd.kafkazen.gui.utils.Constants;
 import ch.bytecrowd.kafkazen.service.KafkaAdminService;
-import ch.bytecrowd.kafkazen.service.KafkaAdminServiceFactory;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;

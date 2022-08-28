@@ -33,9 +33,13 @@
 
 
 
-.jfx-date-picker > .jfx-text-field { -jfx-label-float: true; }
+.jfx-date-picker > .jfx-text-field {
+    -jfx-label-float: "true";
+}
 
-.jfx-time-picker > .jfx-text-field { -jfx-label-float: true; }
+.jfx-time-picker > .jfx-text-field {
+    -jfx-label-float: "true";
+}
 
 
 

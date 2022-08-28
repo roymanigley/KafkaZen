@@ -22,6 +22,7 @@
 ![kafkazen](docs/images/kafkazen.png)
 
 ## Build
+> **java 11 required** otherwise you will get this error `"javafx.scene.Node.getLayoutBounds()" because "this.textNode" is null`
 
     ./mvnw clean package
     
@@ -37,41 +38,12 @@
 > To prevent GTK Warnings/Errors on GTK 2 add this property when running the application
         
         -Djdk.gtk.version=2
-## Example Kafka `docker-compose`
+## Usage Kafka [`docker-compose.yml`](src/main/docker-compose.yml)
 ### start    
-    docker-compose up -d
+    docker-compose -f src/main/docker-compose.yml up -d
 ### stop    
-    docker-compose down
+    docker-compose -f src/main/docker-compose.yml down
 ### logs    
-    docker-compose logs
-### `docker-compose.yml`
-```yaml
-version: '2'
-services:
-  zookeeper:
-    image: strimzi/kafka:0.20.1-kafka-2.6.0
-    command: [
-        "sh", "-c",
-        "bin/zookeeper-server-start.sh config/zookeeper.properties"
-    ]
-    ports:
-      - "2181:2181"
-    environment:
-      LOG_DIR: /tmp/logs
+    docker-compose -f src/main/docker-compose.yml logs
 
-  kafka:
-    image: strimzi/kafka:0.20.1-kafka-2.6.0
-    command: [
-        "sh", "-c",
-        "bin/kafka-server-start.sh config/server.properties --override listeners=$${KAFKA_LISTENERS} --override advertised.listeners=$${KAFKA_ADVERTISED_LISTENERS} --override zookeeper.connect=$${KAFKA_ZOOKEEPER_CONNECT}"
-    ]
-    depends_on:
-      - zookeeper
-    ports:
-      - "9092:9092"
-    environment:
-      LOG_DIR: "/tmp/logs"
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
-      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-```
+

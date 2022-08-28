@@ -10,7 +10,6 @@ import javafx.application.Platform;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import org.apache.kafka.clients.admin.TopicListing;
 
 import javax.swing.*;

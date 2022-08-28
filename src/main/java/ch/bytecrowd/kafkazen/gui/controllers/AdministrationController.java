@@ -23,8 +23,8 @@ import org.apache.kafka.common.TopicPartition;
 
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
-import java.util.*;
 import java.util.List;
+import java.util.*;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 

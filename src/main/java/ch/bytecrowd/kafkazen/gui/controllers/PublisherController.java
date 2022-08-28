@@ -12,7 +12,6 @@ import javafx.fxml.FXML;
 import org.apache.kafka.clients.admin.TopicListing;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.TreeSet;
 import java.util.stream.Collectors;

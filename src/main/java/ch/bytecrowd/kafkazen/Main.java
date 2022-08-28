@@ -3,7 +3,6 @@ package ch.bytecrowd.kafkazen;
 import ch.bytecrowd.kafkazen.gui.utils.Constants;
 import ch.bytecrowd.kafkazen.gui.utils.StageManager;
 import ch.bytecrowd.kafkazen.gui.views.FxmlView;
-import io.quarkus.runtime.Quarkus;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
