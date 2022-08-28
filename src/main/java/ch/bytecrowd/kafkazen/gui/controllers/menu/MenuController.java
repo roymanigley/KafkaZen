@@ -6,11 +6,9 @@ import ch.bytecrowd.kafkazen.gui.utils.StageManager;
 import ch.bytecrowd.kafkazen.gui.views.FxmlView;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
-import javafx.scene.layout.Background;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.TextAlignment;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class MenuController {
